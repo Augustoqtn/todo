@@ -32,6 +32,12 @@ class TasksController < ApplicationController
       render :edit
     end
   end
+  def destroy
+    @task = Task.find(params[:id])
+    @task.destroy
+
+    redirect_to root_path
+  end
 
   private
 
