@@ -19,8 +19,10 @@ class TasksController < ApplicationController
       render :new
     end
   end
-      private
-    def task_params
-      params.require(:task).permit(:description, :date)
-    end
+
+  private
+
+  def task_params
+    params.require(:task).permit(:description, :date)
+  end
 end

@@ -4,11 +4,18 @@
   <div>
     <%= form.label :descrição %><br>
     <%= form.text_field :description %>
+    <% @task.errors.full_messages_for(:description).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
   </div>
 
   <div>
     <%= form.label :data %><br>
     <%= form.text_area :date %>
+    <% @task.errors.full_messages_for(:date).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+
   </div>
 
   <div>
