@@ -1,0 +1,17 @@
+<h1>Qual será sua proxima tarefa?</h1>
+
+<%= form_with model: @task do |form| %>
+  <div>
+    <%= form.label :descrição %><br>
+    <%= form.text_field :description %>
+  </div>
+
+  <div>
+    <%= form.label :data %><br>
+    <%= form.text_area :date %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
